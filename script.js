@@ -2,28 +2,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Floating Hearts Background
     const heartsContainer = document.getElementById('floatingHearts');
     const heartSymbols = ['♥', '♡', '✨'];
-    
+
     function createHeart() {
         const heart = document.createElement('div');
         heart.classList.add('heart-bg');
         heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
-        
+
         // Random position, size, and animation duration
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
         heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
         heart.style.animationDelay = Math.random() * 5 + 's';
-        
+
         heartsContainer.appendChild(heart);
-        
+
         // Remove after animation completes to keep DOM clean
         setTimeout(() => {
             heart.remove();
         }, 20000);
     }
-    
+
     // Create initial hearts and then periodically
-    for(let i=0; i<15; i++) {
+    for (let i = 0; i < 15; i++) {
         setTimeout(createHeart, Math.random() * 3000);
     }
     setInterval(createHeart, 2000);
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rsvpForm) {
         rsvpForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Basic Validation
             if (!rsvpForm.checkValidity()) {
                 formStatus.className = 'form-status error';
@@ -121,40 +121,42 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.innerText = 'Отправка...';
             submitBtn.disabled = true;
 
-            // MOCK SUBMISSION TO GOOGLE SHEETS
-            // In a real app, you would use fetch to send data to Google Apps Script URL here
-            // Example:
-            /*
-            const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+            // REAL SUBMISSION TO GOOGLE SHEETS
+            // Replace this URL with your actual Google Apps Script Web App URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMuCzHUXj6RdORNHqlOU-76p2brN2GXwwP9ngPwHhGFNHaQ8_jxpqox4NDHxeKuhM/exec';
+
             fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => { ... })
-                .catch(error => { ... });
-            */
+                .then(response => {
+                    let statusMessage = '';
+                    if (data.attendance === 'no') {
+                        statusMessage = 'Нам жаль, что вы не сможете прийти. Спасибо за ответ!';
+                    } else {
+                        statusMessage = 'Спасибо! Мы очень ждем вас на нашей свадьбе! 🎉';
+                    }
 
-            // Simulating network delay for demonstration
-            setTimeout(() => {
-                let statusMessage = '';
-                if (data.attendance === 'no') {
-                    statusMessage = 'Нам жаль, что вы не сможете прийти. Спасибо за ответ!';
-                } else {
-                    statusMessage = 'Спасибо! Мы очень ждем вас на нашей свадьбе! 🎉';
-                }
+                    formStatus.style.display = 'block';
+                    formStatus.className = 'form-status success';
+                    formStatus.innerText = statusMessage;
 
-                formStatus.className = 'form-status success';
-                formStatus.innerText = statusMessage;
-                
-                // Reset form and button
-                rsvpForm.reset();
-                btnText.innerText = originalText;
-                submitBtn.disabled = false;
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    formStatus.style.display = 'none';
-                    formStatus.className = 'form-status';
-                }, 5000);
-                
-            }, 1500);
+                    // Reset form and button
+                    rsvpForm.reset();
+                    btnText.innerText = originalText;
+                    submitBtn.disabled = false;
+
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.style.display = 'none';
+                        formStatus.className = 'form-status';
+                    }, 5000);
+                })
+                .catch(error => {
+                    formStatus.style.display = 'block';
+                    formStatus.className = 'form-status error';
+                    formStatus.innerText = 'Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.';
+
+                    btnText.innerText = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 });
