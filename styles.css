@@ -664,6 +664,32 @@ a {
     box-shadow: 0 0 10px rgba(201, 169, 110, 0.5);
 }
 
+/* Стили для фиксированного префикса телефона */
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #e0dcd9;
+}
+
+.phone-prefix {
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding-right: 6px;
+    font-weight: 500;
+}
+
+.phone-input {
+    border-bottom: none;
+    /* Убираем двойную линию */
+    padding-left: 4px;
+}
+
+/* Обновляем анимацию подчеркивания для нового поля */
+.phone-input-wrapper:focus-within~.input-border {
+    width: 100%;
+}
+
 /* Responsive Settings */
 @media (max-width: 768px) {
     .nav-dots {

@@ -110,6 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const formData = new FormData(rsvpForm);
+
+            // Добавляем +7 к введенному номеру перед отправкой в таблицу
+            const currentPhone = formData.get('phone');
+            formData.set('phone', '+7 ' + currentPhone);
+
             const data = Object.fromEntries(formData.entries());
 
             const btnText = submitBtn.querySelector('.btn-text');
