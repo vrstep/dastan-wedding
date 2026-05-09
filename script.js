@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.innerText = 'Отправка...';
             submitBtn.disabled = true;
 
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbycTt0PJ6utbGh-v3DO-XmBCQEt_6NJ6qP-kUm9iRaFU5sPf1oxibfJsZNLBn_eUYc/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwV3zCg4S8SA3pcgUttomdlzQvmtyeRxYEyu2hc8TPyWwjr0CkeQzDQPOl1-Uy0Rw/exec';
 
             fetch(scriptURL, { method: 'POST', body: formData })
                 .then(response => {
