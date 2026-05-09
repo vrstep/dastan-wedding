@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дастан & Айжан — Свадебное Приглашение</title>
+    <meta name="description" content="Мы приглашаем вас разделить с нами радость нашего самого счастливого дня. Свадьба Дастана и Айжан.">
+    <meta name="theme-color" content="#1a0a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+    <!-- Navigation dots -->
+    <nav class="nav-dots" id="navDots" aria-label="Section navigation">
+        <a href="#hero" class="nav-dot active" data-section="hero" aria-label="Hero section"></a>
+        <a href="#invitation" class="nav-dot" data-section="invitation" aria-label="Invitation section"></a>
+        <a href="#details" class="nav-dot" data-section="details" aria-label="Details section"></a>
+        <a href="#rsvp" class="nav-dot" data-section="rsvp" aria-label="RSVP section"></a>
+        <a href="#countdown" class="nav-dot" data-section="countdown" aria-label="Countdown section"></a>
+    </nav>
+
+    <!-- SECTION 1: Hero -->
+    <section id="hero" class="section hero">
+        <div class="hero-overlay"></div>
+        <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+        <div class="hero-content animate-on-scroll">
+            <div class="rings-image">
+                <img src="assets/images/wedding-rings.png" alt="Wedding rings" width="180" height="180">
+            </div>
+            <p class="hero-subtitle">Мы женимся!</p>
+            <h1 class="hero-names">
+                <span class="name name-groom">Дастан</span>
+                <span class="ampersand">&</span>
+                <span class="name name-bride">Айжан</span>
+            </h1>
+            <div class="hero-date-wrapper">
+                <div class="decorative-line"></div>
+                <p class="hero-date">28 июня 2026</p>
+                <div class="decorative-line"></div>
+            </div>
+            <a href="#invitation" class="scroll-indicator" aria-label="Scroll to next section">
+                <span class="scroll-arrow"></span>
+                <span class="scroll-arrow"></span>
+                <span class="scroll-arrow"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: Invitation Message -->
+    <section id="invitation" class="section invitation">
+        <div class="section-inner">
+            <div class="floral-decoration floral-top animate-on-scroll">
+                <img src="assets/images/floral-frame.png" alt="" width="260" height="260" aria-hidden="true">
+            </div>
+            <div class="invitation-content animate-on-scroll">
+                <h2 class="section-title script-font">Дорогие друзья и близкие!</h2>
+                <div class="invitation-divider">
+                    <span class="heart-icon">♥</span>
+                </div>
+                <p class="invitation-text">
+                    С огромной радостью сообщаем вам, что мы решили объединить наши судьбы 
+                    и начать новую главу нашей жизни вместе.
+                </p>
+                <p class="invitation-text">
+                    Приглашаем вас разделить с нами радость этого особенного дня. 
+                    Ваше присутствие сделает наш праздник ещё более незабываемым и тёплым.
+                </p>
+                <p class="invitation-text highlight-text">
+                    Будем счастливы видеть вас на нашей свадьбе!
+                </p>
+                <div class="signature">
+                    <span class="script-font">С любовью, Дастан и Айжан</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Wedding Details -->
+    <section id="details" class="section details">
+        <div class="section-inner">
+            <h2 class="section-title animate-on-scroll">Детали свадьбы</h2>
+            <div class="details-grid">
+                <!-- Calendar -->
+                <div class="detail-card animate-on-scroll" id="calendarCard">
+                    <div class="card-icon">📅</div>
+                    <h3>Дата и время</h3>
+                    <div class="calendar-widget">
+                        <div class="calendar-header">
+                            <span>Июнь 2026</span>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="cal-day-name">Пн</div>
+                            <div class="cal-day-name">Вт</div>
+                            <div class="cal-day-name">Ср</div>
+                            <div class="cal-day-name">Чт</div>
+                            <div class="cal-day-name">Пт</div>
+                            <div class="cal-day-name">Сб</div>
+                            <div class="cal-day-name">Вс</div>
+                            <div class="cal-day">1</div>
+                            <div class="cal-day">2</div>
+                            <div class="cal-day">3</div>
+                            <div class="cal-day">4</div>
+                            <div class="cal-day">5</div>
+                            <div class="cal-day">6</div>
+                            <div class="cal-day">7</div>
+                            <div class="cal-day">8</div>
+                            <div class="cal-day">9</div>
+                            <div class="cal-day">10</div>
+                            <div class="cal-day">11</div>
+                            <div class="cal-day">12</div>
+                            <div class="cal-day">13</div>
+                            <div class="cal-day">14</div>
+                            <div class="cal-day">15</div>
+                            <div class="cal-day">16</div>
+                            <div class="cal-day">17</div>
+                            <div class="cal-day">18</div>
+                            <div class="cal-day">19</div>
+                            <div class="cal-day">20</div>
+                            <div class="cal-day">21</div>
+                            <div class="cal-day">22</div>
+                            <div class="cal-day">23</div>
+                            <div class="cal-day">24</div>
+                            <div class="cal-day">25</div>
+                            <div class="cal-day">26</div>
+                            <div class="cal-day">27</div>
+                            <div class="cal-day highlight-day">28</div>
+                            <div class="cal-day">29</div>
+                            <div class="cal-day">30</div>
+                        </div>
+                    </div>
+                    <p class="detail-time">
+                        <span class="time-icon">🕐</span>
+                        Начало в <strong>17:00</strong>
+                    </p>
+                </div>
+
+                <!-- Location -->
+                <div class="detail-card animate-on-scroll" id="locationCard">
+                    <div class="card-icon">📍</div>
+                    <h3>Место проведения</h3>
+                    <p class="venue-name">Ресторан "Название"</p>
+                    <p class="venue-address">г. Алматы, ул. Примерная, 123</p>
+                    <a href="https://2gis.kz" target="_blank" rel="noopener noreferrer" class="map-link" id="mapLink">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Открыть в 2GIS
+                    </a>
+                    <div class="dress-code">
+                        <h4>Дресс-код</h4>
+                        <div class="color-palette">
+                            <span class="color-swatch" style="background: #1a1a2e;" title="Тёмно-синий"></span>
+                            <span class="color-swatch" style="background: #c9a96e;" title="Золотой"></span>
+                            <span class="color-swatch" style="background: #f5f0eb;" title="Кремовый"></span>
+                            <span class="color-swatch" style="background: #8b7355;" title="Бронзовый"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: RSVP Form -->
+    <section id="rsvp" class="section rsvp">
+        <div class="section-inner">
+            <h2 class="section-title animate-on-scroll">Подтверждение</h2>
+            <p class="rsvp-subtitle animate-on-scroll">
+                Пожалуйста, дайте нам знать, сможете ли вы присоединиться к нашему празднику
+            </p>
+            <form id="rsvpForm" class="rsvp-form animate-on-scroll" novalidate>
+                <div class="form-group">
+                    <label for="guestName" class="form-label">Ваше полное имя</label>
+                    <input 
+                        type="text" 
+                        id="guestName" 
+                        name="name" 
+                        class="form-input" 
+                        placeholder="Имя Фамилия" 
+                        required
+                        autocomplete="name"
+                    >
+                    <span class="input-border"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Вы сможете присутствовать?</label>
+                    <div class="attendance-options">
+                        <label class="attendance-option" for="attend-yes">
+                            <input type="radio" id="attend-yes" name="attendance" value="yes" required>
+                            <span class="option-card">
+                                <span class="option-emoji">🎉</span>
+                                <span class="option-text">Да, приду</span>
+                            </span>
+                        </label>
+                        <label class="attendance-option" for="attend-partner">
+                            <input type="radio" id="attend-partner" name="attendance" value="with_partner">
+                            <span class="option-card">
+                                <span class="option-emoji">💑</span>
+                                <span class="option-text">С парой</span>
+                            </span>
+                        </label>
+                        <label class="attendance-option" for="attend-family">
+                            <input type="radio" id="attend-family" name="attendance" value="with_family">
+                            <span class="option-card">
+                                <span class="option-emoji">👨‍👩‍👧‍👦</span>
+                                <span class="option-text">С семьёй</span>
+                            </span>
+                        </label>
+                        <label class="attendance-option" for="attend-no">
+                            <input type="radio" id="attend-no" name="attendance" value="no">
+                            <span class="option-card">
+                                <span class="option-emoji">😔</span>
+                                <span class="option-text">Не смогу</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guestPhone" class="form-label">Номер телефона</label>
+                    <input 
+                        type="tel" 
+                        id="guestPhone" 
+                        name="phone" 
+                        class="form-input" 
+                        placeholder="+7 (___) ___-__-__" 
+                        required
+                        autocomplete="tel"
+                    >
+                    <span class="input-border"></span>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Отправить ответ</span>
+                    <span class="btn-icon">💌</span>
+                </button>
+
+                <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- SECTION 5: Countdown -->
+    <section id="countdown" class="section countdown-section">
+        <div class="section-inner">
+            <h2 class="section-title animate-on-scroll script-font">До нашей свадьбы осталось</h2>
+            <div class="countdown-timer animate-on-scroll" id="countdownTimer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="countDays">00</div>
+                    <div class="countdown-label">Дней</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="countHours">00</div>
+                    <div class="countdown-label">Часов</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="countMinutes">00</div>
+                    <div class="countdown-label">Минут</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="countSeconds">00</div>
+                    <div class="countdown-label">Секунд</div>
+                </div>
+            </div>
+            <div class="final-message animate-on-scroll">
+                <p class="script-font">Ждём вас с нетерпением!</p>
+                <div class="final-hearts" aria-hidden="true">
+                    ♥ ♥ ♥
+                </div>
+            </div>
+            <footer class="footer">
+                <p>С любовью, Дастан & Айжан &bull; 2026</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
