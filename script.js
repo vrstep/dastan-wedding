@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // REAL SUBMISSION TO GOOGLE SHEETS
             // Replace this URL with your actual Google Apps Script Web App URL
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzMuCzHUXj6RdORNHqlOU-76p2brN2GXwwP9ngPwHhGFNHaQ8_jxpqox4NDHxeKuhM/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwW2gdsDFELkVciS20luLdxpfWR3DvzA4clerRTNhS_9jL-tk7mlVdbAzM99ttq7tQ/exec';
 
             fetch(scriptURL, { method: 'POST', body: formData })
                 .then(response => {
