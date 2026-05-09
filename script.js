@@ -93,6 +93,44 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
+    // --- Автоформатирование номера телефона ---
+    const phoneInput = document.getElementById('guestPhone');
+
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function (e) {
+            // Очищаем ввод от всего, кроме цифр
+            let inputNumbersValue = phoneInput.value.replace(/\D/g, '');
+
+            // Ограничиваем длину до 10 цифр (стандарт для номеров после +7)
+            inputNumbersValue = inputNumbersValue.substring(0, 10);
+
+            let formattedInputValue = '';
+
+            // Если поле пустое, ничего не делаем
+            if (!inputNumbersValue) {
+                phoneInput.value = '';
+                return;
+            }
+
+            // Формируем маску (XXX) XXX-XX-XX
+            if (inputNumbersValue.length > 0) {
+                formattedInputValue = '(' + inputNumbersValue.substring(0, 3);
+            }
+            if (inputNumbersValue.length >= 4) {
+                formattedInputValue += ') ' + inputNumbersValue.substring(3, 6);
+            }
+            if (inputNumbersValue.length >= 7) {
+                formattedInputValue += '-' + inputNumbersValue.substring(6, 8);
+            }
+            if (inputNumbersValue.length >= 9) {
+                formattedInputValue += '-' + inputNumbersValue.substring(8, 10);
+            }
+
+            // Обновляем значение в поле
+            phoneInput.value = formattedInputValue;
+        });
+    }
+
     // 5. RSVP Form Submission (Kept your Google Sheets logic intact)
     const rsvpForm = document.getElementById('rsvpForm');
     const formStatus = document.getElementById('formStatus');

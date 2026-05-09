@@ -675,7 +675,7 @@ a {
 .phone-prefix {
     color: var(--primary-color);
     font-size: 1rem;
-    padding-right: 6px;
+    padding-right: 2px;
     font-weight: 500;
 }
 
