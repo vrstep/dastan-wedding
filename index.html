@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 
 <head>
     <meta charset="UTF-8">
@@ -25,6 +25,29 @@
 </head>
 
 <body>
+    <!-- Language Selector Overlay -->
+    <div class="lang-overlay" id="langOverlay">
+        <div class="lang-overlay-content">
+            <div class="lang-heart">
+                <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20 36C20 36 0 22 0 10C0 4 4 0 10 4C16 8 20 10 20 10C20 10 24 8 30 4C36 0 40 4 40 10C40 22 20 36 20 36Z"
+                        fill="#C9A96E" opacity="0.7" />
+                </svg>
+            </div>
+            <p class="lang-title-line">ТІЛДІ ТАҢДАҢЫЗ</p>
+            <p class="lang-title-line lang-title-sub">ВЫБЕРИТЕ ЯЗЫК</p>
+            <div class="lang-buttons">
+                <button class="lang-btn" id="btnLangKz" data-lang="kk">
+                    <span>KZ</span>
+                </button>
+                <button class="lang-btn" id="btnLangRu" data-lang="ru">
+                    <span>RU</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Floating particles background -->
     <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
 
@@ -56,7 +79,7 @@
                     </defs>
                 </svg>
             </div>
-            <p class="hero-subtitle">Мы женимся!</p>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">Біз үйленеміз!</p>
             <h1 class="hero-names">
                 <span class="name name-groom">Дастан</span>
                 <span class="ampersand">&</span>
@@ -64,7 +87,7 @@
             </h1>
             <div class="hero-date-wrapper">
                 <div class="decorative-line"></div>
-                <p class="hero-date">30 августа 2026</p>
+                <p class="hero-date" data-i18n="heroDate">30 тамыз 2026</p>
                 <div class="decorative-line"></div>
             </div>
             <a href="#invitation" class="scroll-indicator" aria-label="Scroll to next section">
@@ -89,23 +112,23 @@
                     </svg>
                 </div>
 
-                <h2 class="section-title script-font">Дорогие друзья и близкие!</h2>
+                <h2 class="section-title script-font" data-i18n="invitationTitle">Құрметті туыстар мен достар!</h2>
                 <div class="invitation-divider">
                     <span class="heart-icon">♥</span>
                 </div>
-                <p class="invitation-text">
-                    С огромной радостью сообщаем вам, что мы решили объединить наши судьбы
-                    и начать новую главу нашей жизни вместе.
+                <p class="invitation-text" data-i18n="invitationText1">
+                    Біз өз тағдырымызды біріктіріп, бірге жаңа өмір бастауға шешім қабылдағанымызды
+                    зор қуанышпен хабарлаймыз.
                 </p>
-                <p class="invitation-text">
-                    Приглашаем вас разделить с нами радость этого особенного дня.
-                    Ваше присутствие сделает наш праздник ещё более незабываемым и тёплым.
+                <p class="invitation-text" data-i18n="invitationText2">
+                    Сіздерді осы ерекше күннің қуанышын бізбен бөлісуге шақырамыз.
+                    Сіздердің қатысуыңыз мерекемізді одан да есте қаларлық және жылы етеді.
                 </p>
-                <p class="invitation-text highlight-text">
-                    Будем счастливы видеть вас на нашей свадьбе!
+                <p class="invitation-text highlight-text" data-i18n="invitationHighlight">
+                    Біздің тойда сіздерді көруге қуаныштымыз!
                 </p>
                 <div class="signature">
-                    <span class="script-font">С любовью, Дастан и Аида</span>
+                    <span class="script-font" data-i18n="signature">Сүйіспеншілікпен, Дастан және Айда</span>
                 </div>
             </div>
         </div>
@@ -114,7 +137,7 @@
     <!-- SECTION 3: Wedding Details -->
     <section id="details" class="section details">
         <div class="section-inner">
-            <h2 class="section-title animate-on-scroll script-font">Детали свадьбы</h2>
+            <h2 class="section-title animate-on-scroll script-font" data-i18n="detailsTitle">Той туралы мәліметтер</h2>
             <div class="details-grid">
                 <!-- Calendar -->
                 <div class="detail-card animate-on-scroll" id="calendarCard">
@@ -127,19 +150,19 @@
                             <line x1="3" y1="10" x2="21" y2="10"></line>
                         </svg>
                     </div>
-                    <h3>Дата и время</h3>
+                    <h3 data-i18n="dateTimeTitle">Күні мен уақыты</h3>
                     <div class="calendar-widget">
                         <div class="calendar-header">
-                            <span>Август 2026</span>
+                            <span data-i18n="calendarMonth">Тамыз 2026</span>
                         </div>
                         <div class="calendar-grid">
-                            <div class="cal-day-name">Пн</div>
-                            <div class="cal-day-name">Вт</div>
-                            <div class="cal-day-name">Ср</div>
-                            <div class="cal-day-name">Чт</div>
-                            <div class="cal-day-name">Пт</div>
-                            <div class="cal-day-name">Сб</div>
-                            <div class="cal-day-name">Вс</div>
+                            <div class="cal-day-name" data-i18n="dayMon">Дс</div>
+                            <div class="cal-day-name" data-i18n="dayTue">Сс</div>
+                            <div class="cal-day-name" data-i18n="dayWed">Ср</div>
+                            <div class="cal-day-name" data-i18n="dayThu">Бс</div>
+                            <div class="cal-day-name" data-i18n="dayFri">Жм</div>
+                            <div class="cal-day-name" data-i18n="daySat">Сн</div>
+                            <div class="cal-day-name" data-i18n="daySun">Жс</div>
 
                             <!-- Пустые ячейки для сдвига дней (Пн - Пт) -->
                             <div></div>
@@ -183,8 +206,7 @@
                         </div>
                     </div>
                     <p class="detail-time">
-                        <span class="time-icon">🕐</span>
-                        Начало в <strong>19:00</strong>
+                        <span data-i18n="startTime">Басталуы</span> <strong>19:00</strong>
                     </p>
                 </div>
 
@@ -197,12 +219,12 @@
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                     </div>
-                    <h3>Место проведения</h3>
+                    <h3 data-i18n="venueTitle">Өткізілетін орын</h3>
                     <p class="venue-name">Караоке "Dombyra"</p>
-                    <p class="venue-address">г. Уральск, Микрорайон Астана, 12/1</p>
+                    <p class="venue-address" data-i18n="venueAddress">Орал қ., Астана шағын ауданы, 12/1</p>
                     <a href="https://2gis.kz/uralsk/search/dombyra%20karaoke%20uralsk/firm/70000001068813185"
                         target="_blank" rel="noopener noreferrer" class="beautiful-link map-link" id="mapLink">
-                        Открыть в 2GIS
+                        <span data-i18n="mapLink">2GIS-те ашу</span>
                     </a>
                 </div>
             </div>
@@ -212,40 +234,40 @@
     <!-- SECTION 4: RSVP Form -->
     <section id="rsvp" class="section rsvp">
         <div class="section-inner">
-            <h2 class="section-title animate-on-scroll script-font">Подтверждение</h2>
-            <p class="rsvp-subtitle animate-on-scroll">
-                Пожалуйста, дайте нам знать, сможете ли вы присоединиться к нашему празднику
+            <h2 class="section-title animate-on-scroll script-font" data-i18n="rsvpTitle">Растау</h2>
+            <p class="rsvp-subtitle animate-on-scroll" data-i18n="rsvpSubtitle">
+                Біздің мерекемізге қатыса алатыныңызды хабарлаңыз
             </p>
             <form id="rsvpForm" class="rsvp-form animate-on-scroll" novalidate>
                 <div class="form-group">
-                    <label for="guestName" class="form-label">Ваше полное имя</label>
-                    <input type="text" id="guestName" name="name" class="form-input" placeholder="Имя Фамилия" required
-                        autocomplete="name">
+                    <label for="guestName" class="form-label" data-i18n="labelName">Сіздің толық атыңыз</label>
+                    <input type="text" id="guestName" name="name" class="form-input"
+                        data-i18n-placeholder="placeholderName" placeholder="Аты-жөні" required autocomplete="name">
                     <span class="input-border"></span>
                 </div>
 
                 <div class="form-group">
-                    <label class="form-label">Вы сможете присутствовать?</label>
+                    <label class="form-label" data-i18n="labelAttendance">Сіз қатыса аласыз ба?</label>
                     <div class="attendance-options">
                         <label class="attendance-option" for="attend-yes">
                             <input type="radio" id="attend-yes" name="attendance" value="yes" required>
                             <span class="option-card">
                                 <span class="option-emoji">🎉</span>
-                                <span class="option-text">Да, приду</span>
+                                <span class="option-text" data-i18n="optionYes">Иә, келемін</span>
                             </span>
                         </label>
                         <label class="attendance-option" for="attend-no">
                             <input type="radio" id="attend-no" name="attendance" value="no">
                             <span class="option-card">
                                 <span class="option-emoji">💔</span>
-                                <span class="option-text">Не смогу</span>
+                                <span class="option-text" data-i18n="optionNo">Келе алмаймын</span>
                             </span>
                         </label>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="guestPhone" class="form-label">Номер телефона</label>
+                    <label for="guestPhone" class="form-label" data-i18n="labelPhone">Телефон нөмірі</label>
                     <div class="phone-input-wrapper">
                         <span class="phone-prefix">+7</span>
                         <input type="tel" id="guestPhone" name="phone" class="form-input phone-input"
@@ -255,7 +277,7 @@
                 </div>
 
                 <button type="submit" class="beautiful-link submit-btn" id="submitBtn">
-                    <span class="btn-text">Отправить ответ</span>
+                    <span class="btn-text" data-i18n="submitBtn">Жауапты жіберу</span>
                 </button>
 
                 <div class="form-status" id="formStatus" role="alert" aria-live="polite"></div>
@@ -266,30 +288,31 @@
     <!-- SECTION 5: Countdown -->
     <section id="countdown" class="section countdown-section">
         <div class="section-inner">
-            <h2 class="section-title animate-on-scroll script-font">До нашей свадьбы осталось</h2>
+            <h2 class="section-title animate-on-scroll script-font" data-i18n="countdownTitle">Біздің тойға дейін қалды
+            </h2>
             <div class="countdown-timer animate-on-scroll" id="countdownTimer">
                 <div class="countdown-item">
                     <div class="countdown-number" id="countDays">00</div>
-                    <div class="countdown-label">Дней</div>
+                    <div class="countdown-label" data-i18n="labelDays">Күн</div>
                 </div>
                 <div class="countdown-separator">:</div>
                 <div class="countdown-item">
                     <div class="countdown-number" id="countHours">00</div>
-                    <div class="countdown-label">Часов</div>
+                    <div class="countdown-label" data-i18n="labelHours">Сағат</div>
                 </div>
                 <div class="countdown-separator">:</div>
                 <div class="countdown-item">
                     <div class="countdown-number" id="countMinutes">00</div>
-                    <div class="countdown-label">Минут</div>
+                    <div class="countdown-label" data-i18n="labelMinutes">Минут</div>
                 </div>
                 <div class="countdown-separator">:</div>
                 <div class="countdown-item">
                     <div class="countdown-number" id="countSeconds">00</div>
-                    <div class="countdown-label">Секунд</div>
+                    <div class="countdown-label" data-i18n="labelSeconds">Секунд</div>
                 </div>
             </div>
             <div class="final-message animate-on-scroll">
-                <p class="script-font">Ждём вас с нетерпением!</p>
+                <p class="script-font" data-i18n="finalMessage">Сіздерді асыға күтеміз!</p>
                 <div class="final-hearts" aria-hidden="true">
                     <svg width="80" height="20" viewBox="0 0 80 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -305,7 +328,7 @@
                 </div>
             </div>
             <footer class="footer">
-                <p>С любовью, Дастан & Аида &bull; 2026</p>
+                <p data-i18n="footer">Сүйіспеншілікпен, Дастан &amp; Айда &bull; 2026</p>
             </footer>
         </div>
     </section>

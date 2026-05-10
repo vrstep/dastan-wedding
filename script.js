@@ -1,4 +1,149 @@
+// ========== TRANSLATIONS ==========
+const translations = {
+    kk: {
+        heroSubtitle: 'Біз үйленеміз!',
+        heroDate: '30 тамыз 2026',
+        invitationTitle: 'Құрметті ағайын-туыс, құда-жекжат, дос-жаран!',
+        invitationText1: 'Біз өз тағдырымызды біріктіріп, бірге жаңа өмір бастауға шешім қабылдағанымызды зор қуанышпен хабарлаймыз.',
+        invitationText2: 'Сіздерді осы ерекше күннің қуанышын бізбен бөлісуге шақырамыз. Сіздердің қатысуыңыз мерекемізді одан да есте қаларлық және жылы етеді.',
+        invitationHighlight: 'Біздің тойда сіздерді көруге қуаныштымыз!',
+        signature: 'Сүйіспеншілікпен, Дастан және Аида',
+        detailsTitle: 'Той туралы мәліметтер',
+        dateTimeTitle: 'Күні мен уақыты',
+        calendarMonth: 'Тамыз 2026',
+        dayMon: 'Дс', dayTue: 'Сс', dayWed: 'Ср', dayThu: 'Бс', dayFri: 'Жм', daySat: 'Сн', daySun: 'Жс',
+        startTime: 'Басталуы',
+        venueTitle: 'Өткізілетін орын',
+        venueAddress: 'Орал қ., Астана шағын ауданы, 12/1',
+        mapLink: '2GIS-те ашу',
+        rsvpTitle: 'Растау',
+        rsvpSubtitle: 'Біздің мерекемізге қатыса алатыныңызды хабарлаңыз',
+        labelName: 'Сіздің толық атыңыз',
+        placeholderName: 'Аты-жөні',
+        labelAttendance: 'Сіз қатыса аласыз ба?',
+        optionYes: 'Иә, келемін',
+        optionNo: 'Келе алмаймын',
+        labelPhone: 'Телефон нөмірі',
+        submitBtn: 'Жауапты жіберу',
+        countdownTitle: 'Біздің тойға дейін қалды',
+        labelDays: 'Күн',
+        labelHours: 'Сағат',
+        labelMinutes: 'Минут',
+        labelSeconds: 'Секунд',
+        finalMessage: 'Сіздерді асыға күтеміз!',
+        footer: 'Сүйіспеншілікпен, Дастан & Аида • 2026',
+        // Dynamic messages
+        countdownOver: 'Бақытты күн келді!',
+        submitting: 'Жіберілуде...',
+        formErrorRequired: 'Барлық міндетті жолақтарды толтырыңыз.',
+        formSuccessYes: 'Рахмет! Біз сізді тойымызда көруге асыға күтеміз! 🤍',
+        formSuccessNo: 'Сіздің келе алмайтыныңызға өкінеміз. Жауабыңызға рахмет!',
+        formError: 'Жіберу кезінде қате пайда болды. Қайтадан көріңіз.',
+    },
+    ru: {
+        heroSubtitle: 'Мы женимся!',
+        heroDate: '30 августа 2026',
+        invitationTitle: 'Дорогие друзья и близкие!',
+        invitationText1: 'С огромной радостью сообщаем вам, что мы решили объединить наши судьбы и начать новую главу нашей жизни вместе.',
+        invitationText2: 'Приглашаем вас разделить с нами радость этого особенного дня. Ваше присутствие сделает наш праздник ещё более незабываемым и тёплым.',
+        invitationHighlight: 'Будем счастливы видеть вас на нашей свадьбе!',
+        signature: 'С любовью, Дастан и Аида',
+        detailsTitle: 'Детали свадьбы',
+        dateTimeTitle: 'Дата и время',
+        calendarMonth: 'Август 2026',
+        dayMon: 'Пн', dayTue: 'Вт', dayWed: 'Ср', dayThu: 'Чт', dayFri: 'Пт', daySat: 'Сб', daySun: 'Вс',
+        startTime: 'Начало в',
+        venueTitle: 'Место проведения',
+        venueAddress: 'г. Уральск, Микрорайон Астана, 12/1',
+        mapLink: 'Открыть в 2GIS',
+        rsvpTitle: 'Подтверждение',
+        rsvpSubtitle: 'Пожалуйста, дайте нам знать, сможете ли вы присоединиться к нашему празднику',
+        labelName: 'Ваше полное имя',
+        placeholderName: 'Имя Фамилия',
+        labelAttendance: 'Вы сможете присутствовать?',
+        optionYes: 'Да, приду',
+        optionNo: 'Не смогу',
+        labelPhone: 'Номер телефона',
+        submitBtn: 'Отправить ответ',
+        countdownTitle: 'До нашей свадьбы осталось',
+        labelDays: 'Дней',
+        labelHours: 'Часов',
+        labelMinutes: 'Минут',
+        labelSeconds: 'Секунд',
+        finalMessage: 'Ждём вас с нетерпением!',
+        footer: 'С любовью, Дастан & Аида • 2026',
+        // Dynamic messages
+        countdownOver: 'Счастливый день настал!',
+        submitting: 'Отправка...',
+        formErrorRequired: 'Пожалуйста, заполните все обязательные поля.',
+        formSuccessYes: 'Спасибо! Мы очень ждем вас на нашей свадьбе! 🤍',
+        formSuccessNo: 'Нам жаль, что вы не сможете прийти. Спасибо за ответ!',
+        formError: 'Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.',
+    }
+};
+
+let currentLang = 'kk'; // default
+
+function applyLanguage(lang) {
+    currentLang = lang;
+    const t = translations[lang];
+
+    // Update text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            el.textContent = t[key];
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) {
+            el.placeholder = t[key];
+        }
+    });
+
+    // Update html lang attribute
+    document.documentElement.lang = lang === 'kk' ? 'kk' : 'ru';
+
+    // Save preference
+    localStorage.setItem('weddingLang', lang);
+}
+
+function t(key) {
+    return translations[currentLang][key] || key;
+}
+
+// ========== MAIN ==========
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Language Selector ---
+    const langOverlay = document.getElementById('langOverlay');
+    const btnKz = document.getElementById('btnLangKz');
+    const btnRu = document.getElementById('btnLangRu');
+
+    const savedLang = localStorage.getItem('weddingLang');
+
+    if (savedLang) {
+        // User already chose — skip overlay, apply immediately
+        applyLanguage(savedLang);
+        langOverlay.classList.add('hidden');
+        // Remove from DOM after transition
+        setTimeout(() => langOverlay.remove(), 900);
+    } else {
+        document.body.classList.add('lang-selecting');
+    }
+
+    function selectLanguage(lang) {
+        applyLanguage(lang);
+        document.body.classList.remove('lang-selecting');
+        langOverlay.classList.add('hidden');
+        setTimeout(() => langOverlay.remove(), 900);
+    }
+
+    btnKz.addEventListener('click', () => selectLanguage('kk'));
+    btnRu.addEventListener('click', () => selectLanguage('ru'));
+
     // 1. Soft Glowy Orbs Background
     const heartsContainer = document.getElementById('floatingHearts');
 
@@ -75,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const distance = targetDate - now;
 
         if (distance < 0) {
-            document.getElementById('countdownTimer').innerHTML = "<h2 style='font-family: var(--font-heading); color: var(--primary-color);'>Счастливый день настал!</h2>";
+            document.getElementById('countdownTimer').innerHTML = "<h2 style='font-family: var(--font-heading); color: var(--primary-color);'>" + t('countdownOver') + "</h2>";
             return;
         }
 
@@ -143,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!rsvpForm.checkValidity()) {
                 formStatus.style.display = 'block';
                 formStatus.style.color = 'var(--error-color)';
-                formStatus.innerText = 'Пожалуйста, заполните все обязательные поля.';
+                formStatus.innerText = t('formErrorRequired');
                 return;
             }
 
@@ -157,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const btnText = submitBtn.querySelector('.btn-text');
             const originalText = btnText.innerText;
-            btnText.innerText = 'Отправка...';
+            btnText.innerText = t('submitting');
             submitBtn.disabled = true;
 
             const scriptURL = 'https://script.google.com/macros/s/AKfycbz11nqm1l_rblrI6ddbjuQMNPntsNfXXAeQC_KiNG8ENTtMM3fcoz6G2rEu1-JtXZE/exec';
@@ -165,15 +310,15 @@ document.addEventListener('DOMContentLoaded', () => {
             fetch(scriptURL, { method: 'POST', body: formData })
                 .then(response => {
                     let statusMessage = data.attendance === 'no'
-                        ? 'Нам жаль, что вы не сможете прийти. Спасибо за ответ!'
-                        : 'Спасибо! Мы очень ждем вас на нашей свадьбе! 🤍';
+                        ? t('formSuccessNo')
+                        : t('formSuccessYes');
 
                     formStatus.style.display = 'block';
                     formStatus.style.color = 'var(--success-color)';
                     formStatus.innerText = statusMessage;
 
                     rsvpForm.reset();
-                    btnText.innerText = originalText;
+                    btnText.innerText = t('submitBtn');
                     submitBtn.disabled = false;
 
                     setTimeout(() => { formStatus.style.display = 'none'; }, 5000);
@@ -181,9 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(error => {
                     formStatus.style.display = 'block';
                     formStatus.style.color = 'var(--error-color)';
-                    formStatus.innerText = 'Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.';
+                    formStatus.innerText = t('formError');
 
-                    btnText.innerText = originalText;
+                    btnText.innerText = t('submitBtn');
                     submitBtn.disabled = false;
                 });
         });
